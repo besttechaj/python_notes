@@ -12,17 +12,17 @@
 # note:Everything in python is an object eg class,functions etc
 # below eg--> https://www.programiz.com/python-programming/decorator
 #consider one function 
-'''
-def inc(x):
+#LET'S suppose increment the number by 10
+"""def inc(x):
     return x+10
 # passing the above function inside another function whose notation is func1  as an argument
-def operate(func1,x): # here x is belongs to outer function attribute
-    result=func1(x)
+def operate(func1,y): # here y is belongs to outer function attribute
+    # executing the function below which return integer
+    result=func1(y)
     return result
 # passing the actual parameters
 print(operate(inc,3))
-'''
-
+"""
 # B --> In python we can define function into another function
 '''
 # consider one outer function
@@ -39,13 +39,13 @@ print_message('Programmer')
 
 '''
 # C -->Closure:  function can also return another function as a value
-'''
+"""
 def print_message(message):
     greeting='Hello'
 
     #declaring another function inside the scope of outer function
     def printer():
-        print(greeting,message)
+        print(greeting,'This is ',message)
     #Instead of calling the printer function to run  I am returning this function as an value
     return printer  
 
@@ -53,26 +53,28 @@ def print_message(message):
 # here the outer function ie print_message has done its work and it means all the local variables of outer function has been deleted after doing their work here.However when we call the result function we  still have the access to the variable greeting and message inside inner printer  function such a function is called closure.
 #Closure definition A closure simply an inner function that remembers the values and variables in its enclosing scope even if the outer function is done executing.  
 result=print_message('Ajay')
-result()
-'''
+result()"""
+
 # 
 
               #part - 1 decorators without parameters
 
 #
 
-# python decorators --> a python decorator function acts as a wrapper, it allowed us to add some functionality to the past function without changing the code of the original function. 
-# Python Decorator -> a python decorator is a function that takes in a function, adds some functionality to it and returns the original function
+# python decorators --> a python decorator function acts as a wrapper, it allowed us to add some new functionality to the past function without changing the code of the original function. 
+# Python Decorator -> a python decorator is a function that takes in a function, adds some functionality to it and returns the original function with the added function without change in the original function
 
 # declaring a function
 """def printer():
     print('Hello World')
 
-""# passing a function inside another function
+# passing a function inside another function
 def display_info(func):
+    print('this is outer function')
     # creating an inner function
     def inner():
-        # using dunder name function attribute to get the function name
+        print('this is inner function')
+        # using dunder(double Underscore) name function attribute to get the function name
         print('Executing',func.__name__,"function")
         #calling the function to execute
         func()
@@ -84,8 +86,8 @@ def display_info(func):
 decorated__func=display_info(printer)  
 # calling the function to execute
 
-decorated__func()"""
-
+decorated__func()
+"""
 #In python we have a much more elegant way of writing the above last two line implicitly using teh @-symbol
 """def display_info(func):
     # creating an inner function
@@ -127,6 +129,7 @@ def smart_divide(func):
 
     return inner
 
+# Here we are returning a new function hence to execute it we need to call it
 result=smart_divide(divide)
 result(2,4)    """
 
@@ -142,7 +145,8 @@ result(2,4)    """
 #         return func(a,b)
 #     return inner
 
-# here we are passing divide function as an argument in smart_divide function
+# shortcut for above
+# here we are passing divide function as an argument in smart_divide function directly with @ notation
 # @smart_divide
 # def divide(a,b):
 #     return a/b
@@ -159,8 +163,52 @@ result(2,4)    """
 
 #
               # part 3 - In python a function be decorated multiple times with different or the same decorators
-#
 
+# Traditional way:
+# defining a decorator which takes function as a parameter
+"""def star(funcAsParameter1):
+    print('this is star function')
+
+    # defining inner function
+    def inner(args1):
+        print('*'*10)
+        funcAsParameter1(args1)
+        print('*'*12)
+    return inner
+
+# defining another decorator which takes functions
+def percent(functionAsParameter2):
+    print('This is percent function')
+    # passing the argument(message) to the inner function
+    def inner(args2):
+        print("%"*30)
+        functionAsParameter2(args2)
+        print("%"*30)
+    return inner
+
+# the function to be passed
+def targetFunction(message):
+    print(message)
+
+# creating function Call using decorator
+newFunction = star(targetFunction)
+newFunction('hey')
+print('============================================================')
+# creating another function call using another decorator
+newFunction2 = percent(targetFunction)
+newFunction2('hey')
+print('=====================================================')
+print(" Let's perform decorator chaining ")
+# initializing multiple chaining decorators without using @ symbol
+# working :  we are passing percent function as a parameter to star(decorator) and then printer function as a parameter to percent(decorator) 
+newFunction3 = star(percent(targetFunction))
+newFunction3('This is decorator chaining')
+"""
+
+
+##########################################################
+
+# some examples based on decorator chaining
 # defining a decorator which takes functions
 """def star(func):
     # passing the argument(message) to the inner function
@@ -179,11 +227,18 @@ def percent(func):
         print("%"*30)
     return inner
 
-# initializing multiple decorators on a single function
-
+# initializing multiple chaining decorators on a single function using @ symbol
+# working :  we are passing percent function as a parameter to star(decorator) and then printer function as a parameter to percent(decorator) 
 @star
 @percent
 def printer(msg):
     print(msg)
 
 printer('Decorators are wonderful')"""
+
+# initializing multiple decorators without using @ symbol : traditional way
+
+# def printer(msg):
+#      print(msg)
+# printer=star(percent(printer))
+

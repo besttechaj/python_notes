@@ -53,8 +53,8 @@ from functools import reduce
 # print(result)
 
 ## Refactoring the above code using lambda ##
-targetList=[2, 6, 8, 4, 6, 2]
+# targetList=[2, 6, 8, 4, 6, 2]
 
-result2=reduce(lambda a,b: a+b,targetList)
-print(result2)
-print(type(result2))
+# result2=reduce(lambda a,b: a+b,targetList)
+# print(result2)
+# print(type(result2))
