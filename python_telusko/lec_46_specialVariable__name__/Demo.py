@@ -3,6 +3,7 @@
 
 # declaring a function
 def func0():
+    print('this is func0 function from demo module')
     print('Hello New UserName,Please Click SingUp button to register yourself')
     print('Hello',__name__)
 

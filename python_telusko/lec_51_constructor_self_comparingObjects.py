@@ -37,7 +37,7 @@ class Computer:
 
     # creating a method to update value
     def update(self):
-        # Note: whoever object called this update method  self store that object as a parameter 
+        # Note: whichever object called this update method  self store that object as a parameter 
         # self contains the current object hence to change the variable inside object we need to do it by calling self
         self.age=30
     
@@ -55,6 +55,7 @@ c1=Computer()
 c2=Computer()  
 
 # to compare two objects we need to create method for it
+# with the help of one object we are calling the compare object and passing the send obj as a parameter inside compare method. hence self store the calling obj and other variable stores the other object
 if c1.compare(c2):
     print('Both the Objects  are same')
 else:

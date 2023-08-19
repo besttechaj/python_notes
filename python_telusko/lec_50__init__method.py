@@ -10,7 +10,7 @@ class Computer:
     def config(self):
         # self-> stores the current method
         print('This is config method')
-        # we cannot directly access the cpu and ram variable because they are stored inside object. we call call them using current object ie. self.cpu and self.ram  
+        # we cannot directly access the cpu and ram variable because they are stored inside object. we call them using current object ie. self.cpu and self.ram  
         print('Cpu is :',self.cpu)
         print('Cpu is :',self.ram)
 
