@@ -140,9 +140,33 @@
 
 #============================================================
 # SETS {} : Used for getting unique elements
-list1=['ruby','python','javascript']
-list2=['ruby','sql','core-java','javascript']
+# Sets are used to store multiple items in a single variable.
 
-unique_elements=set(list1+list2)
-print(unique_elements)
-print(type(unique_elements))
+# Set is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary, all with different qualities and usage.
+
+# A set is a collection which is unordered, unchangeable*, and un-indexed.
+
+# * Note: Set items are unchangeable, but you can remove items and add new items.
+
+# Sets are written with curly brackets.
+
+
+# list1=['ruby','python','javascript']
+# list2=['ruby','sql','core-java','javascript']
+
+# unique_elements=set(list1+list2)
+# print(unique_elements)
+# print(type(unique_elements)) # set - class 
+
+# # To check whether element exist or not inside a list by using 'in' keyword
+# print('ruby' in unique_elements)
+# print('mahi' in unique_elements)
+
+# creating a function which will return unique values from a given list
+def unique(languages):
+  # returning list after completion of data processing
+  return list(set(languages))
+
+result = unique(['python','sql','javascript','java','java','sql'])
+print(result)
+print(type(result))
