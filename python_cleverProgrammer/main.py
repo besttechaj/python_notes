@@ -57,9 +57,17 @@
 # test_code()
 #============================================================
 
+# Data Types	Classes	Description in python
+# Numeric :	int, float, complex	: holds numeric values
+# String : str :	holds sequence of characters
+# Sequence :	list, tuple, range :	holds collection of items
+# Mapping	: dict :	holds data in key-value pair form
+# Boolean	: bool :	holds either True or False
+# Set :	set, frozeenset : hold collection of unique items
+
 # List --> In python arrays are known as List
-# list can store different datatypes
-l1= ['ram','hard-disk','cd-rom','computer','laptop','cpu','mouse','keyboard']
+# list can store different datatypes 
+# l1= ['ram','hard-disk','cd-rom','computer','laptop','cpu','mouse','keyboard']
 # print(l1)
 # appending using list
 # l1.append('motherboard')
@@ -97,20 +105,44 @@ l1= ['ram','hard-disk','cd-rom','computer','laptop','cpu','mouse','keyboard']
 ### DICTIONARY ### 
 # In python, Objects are known as Dictionary
 
-def netWorth():
-    return person['assets']-person['deb']
 
-def introducer():
+
+# def introducer():
     
-  person={
-    "name":"SANJAY VERMA",
-    'email':'vermaji@gmail.com',
-    'number':2234443434,
-    'address':'tamil-Nadu',
-    'assets':1000,
-    'deb':50,
-    'net-worth':lambda : person['assets']-person['deb']
-  }
-  print(f'Hi my name is {person["name"]}, Currently I am living in {person["address"]} and my net worth is {person['net-worth']()}')
+#   person={
+#     "name":"SANJAY VERMA",
+#     'email':'vermaji@gmail.com',
+#     'number':2234443434,
+#     'address':'tamil-Nadu',
+#     'assets':1000,
+#     'deb':50,
+#     'net-worth':lambda : person['assets']-person['deb'],
+#     # it can even hold another array/list
+#     'favoriteFruits':['Mango-Shake','Strawberry-Shake']
+#   }
+#   print(f"Hi my name is {person['name']}.\nCurrently I am living in {person['address']} \nAnd my net worth is ${person['net-worth']()}.\nMy favorite Fruit juice is {person['favoriteFruits']}")
+#   # to get all the values
+#   # print(person.values())
+#   # to get all the keys
+#   # print(person.keys())
+#   # to get all the values in list form
+#   print(list(person.values()))
 
-introducer()
+# introducer()
+
+#=============================================================
+# TUPLES (DATA_TYPE)
+# numbers=(1,2,4)
+# print(numbers)
+# # tuples are immutable
+# numbers[0]=21 # error
+# print(numbers)
+
+#============================================================
+# SETS {} : Used for getting unique elements
+list1=['ruby','python','javascript']
+list2=['ruby','sql','core-java','javascript']
+
+unique_elements=set(list1+list2)
+print(unique_elements)
+print(type(unique_elements))
