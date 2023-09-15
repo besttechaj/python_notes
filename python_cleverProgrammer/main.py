@@ -217,3 +217,20 @@
 #     counter=counter+1
 
 # table(num)
+
+## Revision
+
+# task -> need to double the every element present inside the list
+numbers=[12,33,455,78,455,878,8]
+def double(numbers:list)->list:# return must be the list
+  # consider an empty list
+  empty_List=[]
+  for values in numbers:
+    # Appending every new value inside list after updating 
+    empty_List.append(values*2)
+  
+  return empty_List
+
+data =  double(numbers)
+print(data)
+
