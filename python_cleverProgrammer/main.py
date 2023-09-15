@@ -188,8 +188,22 @@
 # enumerate()-> takes a collection (eg. tuple,list) and returns it as an enumerate object. The enumerate() function adds a counter as the key of the enumerate object.
 # print(list(enumerate(fruits))) 
 # some more points ..
-fruits=['apple','orange','papaya','grapes','banana']
-for fruit in enumerate(fruits):
-  # enumerates(list(index/key, pair))
-  print(f'fruit : {fruit[1]} , {fruit[0]}')
-  print(f'fruit : {fruit[0]} , {fruit[1]}')
+# fruits=['apple','orange','papaya','grapes','banana']
+# for fruit in enumerate(fruits):
+#   # enumerates(list(index/key, pair))
+#   print(f'fruit : {fruit[1]} , {fruit[0]}')
+#   print(f'fruit : {fruit[0]} , {fruit[1]}')
+
+## Tuple  UN-PACKING 
+# fruits=['apple','orange','papaya','grapes','banana']
+# for index, fruit in enumerate(fruits):
+#   # enumerates(list(index/key, pair))
+#   print(f' fruit {index} : {fruit}')
+
+# range() function -> returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number
+# fruits=['apple','orange','papaya','grapes','banana']
+# using range function let us append some more fruits inside the fruit list
+# for _ in range(10):
+#   fruits.append('pineapple')
+# print(fruits)
+
