@@ -207,3 +207,13 @@
 #   fruits.append('pineapple')
 # print(fruits)
 
+# While loop -> it is used to iterate over a block of code as long as the test expression(condition) is true
+# num=int(input('Enter a number '))
+# def table(num):
+#   counter=1
+
+#   while counter<11:
+#     print(f'{num}*{counter} = {num*counter}')
+#     counter=counter+1
+
+# table(num)
