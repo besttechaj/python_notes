@@ -163,10 +163,33 @@
 # print('mahi' in unique_elements)
 
 # creating a function which will return unique values from a given list
-def unique(languages):
-  # returning list after completion of data processing
-  return list(set(languages))
+# def unique(languages):
+#   # returning list after completion of data processing
+#   return list(set(languages))
 
-result = unique(['python','sql','javascript','java','java','sql'])
-print(result)
-print(type(result))
+# result = unique(['python','sql','javascript','java','java','sql'])
+# print(result)
+# print(type(result))
+
+# performing the above operation using lambda function
+# languages=['hindi','hindi','english','marathi','english','tamil']
+# unique= lambda languages: list(set(languages))
+# print(unique(languages))
+# print(type(unique))
+#=============================================================================
+### Loops ###
+# for - loop
+# fruits=['apple','orange','papaya','grapes','banana']
+# i=0
+# for fruit in fruits:
+#   print(f'fruit {i} : {fruit}')
+#   i=i+1
+# to get the index of the above list's items we use enumerate() function
+# enumerate()-> takes a collection (eg. tuple,list) and returns it as an enumerate object. The enumerate() function adds a counter as the key of the enumerate object.
+# print(list(enumerate(fruits))) 
+# some more points ..
+fruits=['apple','orange','papaya','grapes','banana']
+for fruit in enumerate(fruits):
+  # enumerates(list(index/key, pair))
+  print(f'fruit : {fruit[1]} , {fruit[0]}')
+  print(f'fruit : {fruit[0]} , {fruit[1]}')
