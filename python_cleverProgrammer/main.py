@@ -218,7 +218,7 @@
 
 # table(num)
 
-## Revision
+## Revision ----------->  BASED ON LIST
 
 # task -> need to double the every element present inside the list
 """numbers=[12,33,455,78,455,878,8]
@@ -264,3 +264,38 @@ def list_sum(empty_list:list)->int:
 result = list_sum(empty_list)
 print(f'the sum of all the elements present inside a given list is : {result}')"""
 
+# task --> to find the max value from a list
+# consider a list 
+"""list1= [23,21,45,765,868,43,75,8]
+def getMax(lt:list)->int:# return must be a number
+  currentMax=lt[0]
+  for element in lt:
+    if element > currentMax:
+      currentMax=element
+  return currentMax
+
+result = getMax(list1)
+print(f'The largest value in the list is : {result}')"""
+
+## Revision ----------> Based on Dictionary
+# task --> word frequency : calculates the number of word occurred in the given Phrase
+"""data = input('Enter your Phrase : ')
+
+def word_Frequency(phrase:str):
+    # step-1 turn the phrase into a list to easily manipulate the items inside 
+    print('Converting string into list using split method')
+    print(phrase.split())
+    words_list=phrase.split()
+    # step-2 Assume an empty Dictionary
+    empty_Dictionary={}
+    # step-3 Looping through the words_list
+    for element in words_list:
+        # step-4 filter out the matched items from the list
+        if element not in empty_Dictionary:
+            # we are storing element as key and the no. of occurrence as value 
+            empty_Dictionary[element]=1
+        else: 
+            empty_Dictionary[element] +=1
+    return empty_Dictionary
+
+print('Printing out the result >>> ',word_Frequency(data))"""
