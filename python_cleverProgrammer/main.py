@@ -221,16 +221,46 @@
 ## Revision
 
 # task -> need to double the every element present inside the list
-numbers=[12,33,455,78,455,878,8]
+"""numbers=[12,33,455,78,455,878,8]
 def double(numbers:list)->list:# return must be the list
   # consider an empty list
   empty_List=[]
   for values in numbers:
     # Appending every new value inside list after updating 
     empty_List.append(values*2)
-  
+    print(empty_List)
+
   return empty_List
 
 data =  double(numbers)
-print(data)
+print(data)"""
+
+# task --> count the number of words present inside a given string
+"""
+phrase=input('Please Enter a random phrase : ')
+def count_words(phrase:str)->int:
+      # split returns a list
+      isolate=phrase.split()# by default split uses split(' ') 
+      # print(isolate.__len__())
+      print(f'your new list is : {phrase.split()}')
+      return len(isolate)
+result = count_words(phrase)
+print(f'The number of words present inside the given string is {result}')"""
+
+# task --> sum of a given list
+"""empty_list=[]
+n=0
+while n<10:
+  # filling the empty list
+  empty_list.append(int(input('Enter your list numbers : ')))
+  print(empty_list)
+  n+=1
+print(f'your newly generated list is : {empty_list}')
+def list_sum(empty_list:list)->int:
+  sum=0
+  for element in empty_list:
+    sum=sum+element
+  return sum
+result = list_sum(empty_list)
+print(f'the sum of all the elements present inside a given list is : {result}')"""
 
