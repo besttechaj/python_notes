@@ -299,3 +299,29 @@ def word_Frequency(phrase:str):
     return empty_Dictionary
 
 print('Printing out the result >>> ',word_Frequency(data))"""
+
+## HIGHER ORDER FUNCTION ##
+# map 
+# filter  
+"""
+>>> task - double the list
+"""
+"""# map : It is a function that works as an iterator to return a result after applying a function to every item of an iterable. Map takes two two inputs as a function and an iterable object. 
+
+def doubleTheNumber(number):
+  return number*2
+# call the list function on the map to be able to iterate and print each item inside
+print(list(map(doubleTheNumber,[1,2,3])))
+# to make it more short code use lambda
+result = list(map((lambda number: number*2),[10,20,30]))
+print(type(result))
+print(result)
+# to square the numbers present inside list
+print(list(map((lambda num:num ** 2),[12,13,14,15,16])))
+"""
+"""# filter : the filter() methods filters the given sequence with the help of a function that tests   each element in the sequence to be true or not.
+
+# >>> task - to filter out the even numbers from the given list
+
+print(list(filter((lambda num : num % 2==0),[1,3,5,6,7,2,23,2004,405])))
+"""
