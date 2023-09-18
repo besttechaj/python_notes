@@ -306,7 +306,7 @@ print('Printing out the result >>> ',word_Frequency(data))"""
 """
 >>> task - double the list
 """
-"""# map : It is a function that works as an iterator to return a result after applying a function to every item of an iterable. Map takes two two inputs as a function and an iterable object. 
+"""# map : It is a function that works as an iterator to return a result after applying a function to every item of an iterable. Map takes two two inputs as a function and an iterable object. map return list
 
 def doubleTheNumber(number):
   return number*2
@@ -319,9 +319,34 @@ print(result)
 # to square the numbers present inside list
 print(list(map((lambda num:num ** 2),[12,13,14,15,16])))
 """
-"""# filter : the filter() methods filters the given sequence with the help of a function that tests   each element in the sequence to be true or not.
+"""# filter : the filter() methods filters the given sequence with the help of a function that tests   each element in the sequence to be true or not. Filter return list
 
 # >>> task - to filter out the even numbers from the given list
 
 print(list(filter((lambda num : num % 2==0),[1,3,5,6,7,2,23,2004,405])))
 """
+"""## List comprehensions : using list comprehension generally easier than using .map() and .filter() methods.
+# first step for list comprehension is make a list which you can use to iterate through
+numbers=[12,34,5346,76,423,65,32,56,77,89,100]
+# syntax -> [ result for-loop condition]
+# filter and give me only even numbers
+# filter - only give me even numbers
+print([number for number in numbers if number % 2==0])
+# filter and give me only even number and then double it
+# to do more operations while displaying result
+print([number*2 for number in numbers if number%2==0 ])
+# iterator throughout the list and then double all the elements present inside the list
+# syntax : [ condition for-loop ]
+# map - double numbers
+print([number*2 for number in numbers])
+# to get all the odd numbers 
+print([target for target in numbers if target%2!=0 ])
+# give me all of the odd number cubed
+# ** denotes the power
+print([target**3 for target in numbers if target%2!=0])
+
+# Special built-in functions in python 
+print(sum([1,32,53,64,32,54,757,22,4,90,76,500]))
+print(len([1,32,53,64,32,54,757,22,4,90,76,500]))
+print(max([1,32,53,64,32,54,757,22,4,90,76,500]))
+print(min([1,32,53,64,32,54,757,22,4,90,76,500]))"""
